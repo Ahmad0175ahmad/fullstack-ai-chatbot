@@ -60,7 +60,8 @@ export default function App() {
     if (currentId === id) setCurrentId(updated.length > 0 ? updated[0].id : null);
     
     try {
-      await fetch(`http://127.0.0.1:8000/conversations/${id}`, { method: 'DELETE' });
+      //await fetch(`http://127.0.0.1:8000/conversations/${id}`, { method: 'DELETE' });
+      await fetch('https://my-chatbot-api-3o68.onrender.com/conversations/${id}', { method: 'DELETE' });
     } catch (err) {
       console.error("Backend delete failed", err);
     }
@@ -100,7 +101,8 @@ export default function App() {
     setCurrentId(activeId);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/chat", {
+      //const response = await fetch("http://127.0.0.1:8000/chat", {
+      const response = await fetch("https://my-chatbot-api-3o68.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
