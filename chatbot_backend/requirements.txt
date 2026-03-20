@@ -5,7 +5,7 @@ psycopg_pool
 langgraph
 langgraph-checkpoint-postgres
 langchain-openai
-langchain-community
+langchain-community>=0.2.0
 duckduckgo-search>=5.0.0
 python-dotenv
 pydantic
