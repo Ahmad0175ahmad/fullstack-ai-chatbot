@@ -1,0 +1,12 @@
+# Backend Secrets & Environments
+chatbot_backend/.env
+chatbot_backend/venv/
+chatbot_backend/.venv/
+chatbot_backend/__pycache__/
+
+# Frontend Heavy Folders
+chatbot-frontend/node_modules/
+chatbot-frontend/dist/
+
+# General
+.DS_Store
