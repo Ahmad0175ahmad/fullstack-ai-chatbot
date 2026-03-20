@@ -7,7 +7,12 @@ load_dotenv()
 DB_URL = os.getenv("DATABASE_URL")
 
 # Connection pool for production-grade database handling
-pool = ConnectionPool(conninfo=DB_URL, kwargs={"row_factory": dict_row, "autocommit": True})
+pool = ConnectionPool(
+    conninfo=os.getenv("DATABASE_URL"),
+    max_size=10, 
+    # ADD THIS EXACT LINE:
+    kwargs={"prepare_threshold": None}
+)
 
 def init_db():
     """Initializes only the Long Term Memory table. LangGraph handles the rest."""
