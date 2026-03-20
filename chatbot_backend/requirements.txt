@@ -6,6 +6,6 @@ langgraph
 langgraph-checkpoint-postgres
 langchain-openai
 langchain-community
-duckduckgo-search
+duckduckgo-search>=5.0.0
 python-dotenv
 pydantic
